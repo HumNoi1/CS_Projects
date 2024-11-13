@@ -1,16 +1,17 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import Navbar from './components/Navbar/Navbar';
 
-
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
+  const [FileName, setFileName] = useState("");
+  const handleFile = (file) => {
+    setFileName(file.name);
+  };
   return (
     <>
-      <chat_llm />
-      <Navabr />
+      <Navbar />
+      <fileUploader handleFile={handleFile} />
+      {FileName ? <p>Uploaded file: {FileName}</p> : null}
     </>
-  )
+  );
 }
 
-export default App
