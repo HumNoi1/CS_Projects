@@ -9,8 +9,9 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <fileUploader handleFile={handleFile} />
-      {FileName ? <p>Uploaded file: {FileName}</p> : null}
+      <div className = 'flex justify-center items-center h-screen bg-gray-100'>
+        {/* File uploads component UI */}
+      </div>
     </>
   );
 }
